@@ -20,6 +20,7 @@
   "requires_arc": false,
   "dependencies": {
     "JSONKit": [
+      "https://github.com/BlueTrailSoftware/JSONKit.git",
       "~> 1.4"
     ]
   },
