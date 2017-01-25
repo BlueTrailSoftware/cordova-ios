@@ -21,18 +21,16 @@
 #import <Foundation/Foundation.h>
 #import "CDVPlugin.h"
 
-enum CDVFileTransferError {
+typedef NS_ENUM (int, CDVFileTransferError) {
 	FILE_NOT_FOUND_ERR = 1,
     INVALID_URL_ERR = 2,
     CONNECTION_ERR = 3
 };
-typedef int CDVFileTransferError;
 
-enum CDVFileTransferDirection {
+typedef NS_ENUM (int, CDVFileTransferDirection) {
 	CDV_TRANSFER_UPLOAD = 1,
     CDV_TRANSFER_DOWNLOAD = 2,
 };
-typedef int CDVFileTransferDirection;
 
 @interface CDVFileTransfer : CDVPlugin {
     

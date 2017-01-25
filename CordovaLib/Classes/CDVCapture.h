@@ -23,15 +23,13 @@
 #import "CDVPlugin.h"
 #import "CDVFile.h"
 
-enum CDVCaptureError {
+typedef NS_ENUM(NSUInteger, CDVCaptureError) {
 	CAPTURE_INTERNAL_ERR = 0,
     CAPTURE_APPLICATION_BUSY = 1,
     CAPTURE_INVALID_ARGUMENT = 2,
     CAPTURE_NO_MEDIA_FILES = 3,
     CAPTURE_NOT_SUPPORTED = 20
 };
-typedef NSUInteger CDVCaptureError;
-
 
 @interface CDVImagePicker : UIImagePickerController
 {

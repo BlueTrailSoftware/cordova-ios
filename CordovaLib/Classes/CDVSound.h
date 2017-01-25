@@ -27,30 +27,27 @@
 
 
 
-enum CDVMediaError {
+typedef NS_ENUM (NSUInteger, CDVMediaError) {
 	MEDIA_ERR_ABORTED = 1,
 	MEDIA_ERR_NETWORK = 2,
 	MEDIA_ERR_DECODE = 3,
 	MEDIA_ERR_NONE_SUPPORTED = 4
 };
-typedef NSUInteger CDVMediaError;
 
-enum CDVMediaStates {
+typedef NS_ENUM(NSUInteger, CDVMediaStates) {
 	MEDIA_NONE = 0,
 	MEDIA_STARTING = 1,
 	MEDIA_RUNNING = 2,
 	MEDIA_PAUSED = 3,
 	MEDIA_STOPPED = 4
 };
-typedef NSUInteger CDVMediaStates;
 
-enum CDVMediaMsg {
+typedef NS_ENUM (NSUInteger, CDVMediaMsg) {
 	MEDIA_STATE = 1,
 	MEDIA_DURATION = 2,
     MEDIA_POSITION = 3,
 	MEDIA_ERROR = 9
 };
-typedef NSUInteger CDVMediaMsg;
 
 @interface CDVAudioPlayer : AVAudioPlayer
 {

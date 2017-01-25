@@ -20,7 +20,7 @@
 #import <Foundation/Foundation.h>
 #import "CDVPlugin.h"
 
-enum CDVFileError {
+typedef NS_ENUM (int, CDVFileError) {
 	NOT_FOUND_ERR = 1,
     SECURITY_ERR = 2,
     ABORT_ERR = 3,
@@ -34,13 +34,11 @@ enum CDVFileError {
     TYPE_MISMATCH_ERR = 11,
     PATH_EXISTS_ERR = 12
 };
-typedef int CDVFileError;
 
-enum CDVFileSystemType {
+typedef NS_ENUM(int, CDVFileSystemType) {
 	TEMPORARY = 0,
 	PERSISTENT = 1
 };
-typedef int CDVFileSystemType;
 
 @interface CDVFile : CDVPlugin {
 	

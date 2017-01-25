@@ -23,7 +23,7 @@
 
 
 
-enum CDVContactError {
+typedef NS_ENUM(NSUInteger, CDVContactError) {
 	UNKNOWN_ERROR = 0,
 	INVALID_ARGUMENT_ERROR = 1,
 	TIMEOUT_ERROR = 2,
@@ -32,10 +32,8 @@ enum CDVContactError {
 	NOT_SUPPORTED_ERROR = 5,
 	PERMISSION_DENIED_ERROR = 20
 };
-typedef NSUInteger CDVContactError;
 
-@interface CDVContact : NSObject {
-	
+@interface CDVContact : NSObject {	
 	ABRecordRef record;			// the ABRecord associated with this contact
 	NSDictionary* returnFields;	// dictionary of fields to return when performing search
 } 

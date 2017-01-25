@@ -22,20 +22,18 @@
 #import <CoreLocation/CoreLocation.h>
 #import "CDVPlugin.h"
 
-enum CDVHeadingStatus {
+typedef NS_ENUM (NSUInteger, CDVHeadingStatus) {
 	HEADINGSTOPPED = 0,
     HEADINGSTARTING,
 	HEADINGRUNNING,
     HEADINGERROR
 };
-typedef NSUInteger CDVHeadingStatus;
 
-enum CDVLocationStatus {
+typedef NS_ENUM (NSUInteger, CDVLocationStatus) {
     PERMISSIONDENIED = 1,
     POSITIONUNAVAILABLE,
     TIMEOUT
 };
-typedef NSUInteger CDVLocationStatus;
 
 // simple object to keep track of heading information
 @interface CDVHeadingData : NSObject {

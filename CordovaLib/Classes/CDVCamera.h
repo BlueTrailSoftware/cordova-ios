@@ -20,24 +20,21 @@
 #import <Foundation/Foundation.h>
 #import "CDVPlugin.h"
 
-enum CDVDestinationType {
+typedef NS_ENUM(NSUInteger, CDVDestinationType) {
 	DestinationTypeDataUrl = 0,
 	DestinationTypeFileUri
 };
-typedef NSUInteger CDVDestinationType;
 
-enum CDVEncodingType {
+typedef NS_ENUM(NSUInteger, CDVEncodingType) {
     EncodingTypeJPEG = 0,
     EncodingTypePNG
 };
-typedef NSUInteger CDVEncodingType;
 
-enum CDVMediaType {
+typedef NS_ENUM(NSUInteger, CDVMediaType) {
     MediaTypePicture = 0,
     MediaTypeVideo,
     MediaTypeAll
 };
-typedef NSUInteger CDVMediaType;
 
 @interface CDVCameraPicker : UIImagePickerController
 {
@@ -47,8 +44,8 @@ typedef NSUInteger CDVMediaType;
 @property (assign) NSInteger quality;
 @property (copy)   NSString* callbackId;
 @property (copy)   NSString* postUrl;
-@property (nonatomic) enum CDVDestinationType returnType;
-@property (nonatomic) enum CDVEncodingType encodingType;
+@property (nonatomic, assign) CDVDestinationType returnType;
+@property (nonatomic, assign) CDVEncodingType encodingType;
 @property (retain) UIPopoverController* popoverController; 
 @property (assign) CGSize targetSize;
 @property (assign) bool correctOrientation;

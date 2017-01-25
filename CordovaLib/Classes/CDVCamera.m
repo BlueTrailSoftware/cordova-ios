@@ -78,7 +78,7 @@
     NSNumber* targetWidth = [arguments objectAtIndex:4];
     NSNumber* targetHeight = [arguments objectAtIndex:5];
     NSNumber* mediaValue = [arguments objectAtIndex:7];
-    CDVMediaType mediaType = (mediaValue) ? [mediaValue intValue] : MediaTypePicture;
+    enum CDVMediaType mediaType = (mediaValue) ? [mediaValue intValue] : MediaTypePicture;
     
     CGSize targetSize = CGSizeMake(0, 0);
     if (targetWidth != nil && targetHeight != nil) {
