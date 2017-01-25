@@ -7,7 +7,7 @@
   "license": "Apache License, Version 2.0",
   "source": {
     "git": "https://github.com/BlueTrailSoftware/cordova-ios.git",
-    "tag": "1.7.0-updated"
+    "tag": "1.7.1"
   },
   "source_files": "CordovaLib/Classes/*.{h,m}",
   "resources": [
